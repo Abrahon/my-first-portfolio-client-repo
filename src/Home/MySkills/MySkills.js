@@ -5,12 +5,10 @@ import './MySkills.css'
 const MySkills = () => {
     return (
         <div className='skills'>
-            <h1 className='text-4xl font-bold text-center text-green-500 pb-5'> My skills </h1>
+            <h1 className='text-3xl font-bold text-center text-warning pb-5'> MY SKILLS </h1>
             <div className='content hero-content flex-col w-full; lg:flex-row-reverse'>
                 <div className="left">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam vero ea voluptates quidem magni animi itaque. Tempora eum autem nemo, quae, et odit natus modi quas quod eligendi, quam sapiente?
-                    </p>
+                   <p className='text-xl'>I am a web developer I also know of HTML, CSS, Javascript, React js, Mongo db, Node js, node express js, C programing language, C++, basic python. And I  also know css frame work like bootstrap, tailwind, and react component daisyUi. </p>
                     {/* <a className='btn btn-bg-orange500' href="#">Red More</a> */}
                    
 

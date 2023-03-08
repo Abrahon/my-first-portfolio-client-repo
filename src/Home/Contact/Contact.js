@@ -1,5 +1,8 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { FaFacebook, FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
+
+import { IconContext } from 'react-icons';
 
 const Contact = () => {
 
@@ -15,17 +18,38 @@ const Contact = () => {
             .then((result) => {
                 console.log(result.text);
                 console.log("message sent");
-                
+
             },
                 (error) => {
                     console.log(error.text);
                 });
     };
     return (
-        <div className=' flex justify-center items-center drop-shadow-2xl '>
+        <div>
+            <h1 className='text-3xl font-bold text-warning text-center'>CONTACT ME</h1>
+
+        {/* <div className='grid gap-3 grid-cols-1 lg:grid-cols-2 p-10'> */}
+
+            {/* <div>
+            <IconContext.Provider value={{ color: 'navy', size: 30 }}>
+                <div>
+
+                    <a className='btn btn-outline  mr-5' href='https://www.facebook.com/ABRAHON?mibextid=ZbWKwL'><FaFacebook  >
+
+                    </FaFacebook>
+                    </a>
+                    <a className='btn btn-outline  mr-5' href='https://github.com/Abrahon'><FaGithub></FaGithub></a>
+                    <a className='btn btn-outline mr-5' href='https://www.linkedin.com/in/md-sujon-mia-2172a524b/'><FaLinkedin></FaLinkedin></a>
+                    <a className='btn btn-outline' href=''><FaWhatsapp></FaWhatsapp></a>
+                </div>
+
+            </IconContext.Provider>
+            </div> */}
+            <div className=' flex justify-center items-center drop-shadow-2xl '>
+
 
                 <div className='lg:w-1/2 md:w-full sm:w-full mb-10 '>
-                    <h1 className='text-3xl font-bold text-orange-600 text-center'>CONTACT ME</h1>
+
 
                     <form ref={form} onSubmit={sendEmail}>
                         <label className='form-control w-full max-w-xs'>Name</label>
@@ -39,9 +63,11 @@ const Contact = () => {
 
                     </form>
                 </div>
-           
 
+
+            </div>
         </div>
+        // </div>
     );
 };
 
